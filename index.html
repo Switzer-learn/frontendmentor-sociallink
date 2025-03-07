@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Social links profile</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { bottom: 10px; color: white; font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @font-face {
+      font-family: "Inter";
+      src: url("assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+    }
+
+    
+
+    body{
+      background-color: hsl(0, 0%, 8%);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      margin: 0;
+    }
+
+    .container{
+      background-color: hsl(0, 0%, 12%);
+      height: auto;
+      width:20%;
+      max-width: 350px;
+      min-width: 280px;
+      border-radius: 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2vh;
+      font-family: "Inter", sans-serif;
+      padding-top: 5vh;
+    }
+
+    .button{
+      color: white;
+      padding:5px;
+      border-radius: 10px;
+      background-color: hsl(0, 0%, 20%);
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .button-section{
+      display: flex;
+      flex-direction: column;
+      gap: 1vh;
+      width: 100%;
+    }
+
+    .images{
+      border-radius: 100%;
+      width: 20vh;
+      margin-bottom: 2vh;
+    }
+
+    p{
+      font-size: 14px;
+    }
+
+    .name-location{
+      display: flex;
+      flex-direction: column;
+      gap: 1vh;
+      align-items: center;
+      text-align: center;
+    }
+
+    .active{
+      background-color: hsl(75, 94%, 57%);
+      color:black;
+    }
+
+    .name{
+      font-weight: 700;
+      font-size: x-large;
+    }
+    .location{
+      color: hsl(75, 94%, 57%);
+      font-weight:600;
+    }
+
+    @media only screen and (max-width: 375px) {
+      .container{
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+      <img src="./assets/images/avatar-jessica.jpeg" class="images" />
+      <div class="name-location">
+        <span class="name">
+          Jessica Randall
+        </span><br/>
+        <span class="location">
+          London, United Kingdom
+        </span>
+        <p class="job">
+        "Front-end developer and avid reader."
+        </p>
+      </div>
+      <div class="button-section">
+        <div class="button" id="github">
+          <p>GitHub</p>
+        </div>
+        <div class="button" id="frontendmentor">
+          <p>Frontend Mentor</p>          
+        </div>
+        <div class="button" id="linkedin">
+          <p>LinkedIn</p>          
+        </div>
+        <div class="button" id="twitter">
+          <p>Twitter</p>          
+        </div>
+        <div class="button" id="instagram">
+          <p>Instagram</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/willycandra">Willy Candra</a>.
+  </div>
+</body>
+<script>
+  document.getElementById("github").addEventListener("click", function(){
+    this.classList.toggle("active");
+  });
+  document.getElementById("frontendmentor").addEventListener("click", function(){
+    this.classList.toggle("active");
+  });
+  document.getElementById("linkedin").addEventListener("click", function(){
+    this.classList.toggle("active");
+  });
+  document.getElementById("twitter").addEventListener("click", function(){
+    this.classList.toggle("active");
+  });
+  document.getElementById("instagram").addEventListener("click", function(){
+    this.classList.toggle("active");
+  });
+</script>
+</html>
